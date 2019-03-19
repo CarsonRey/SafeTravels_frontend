@@ -43,13 +43,13 @@ export default class HomeScreen extends React.Component {
             <Text style={styles.getStartedText}>Log in or create an account!</Text>
             <TextInput  style={{height: 40, borderColor: 'gray', borderWidth: 1, width: '90%'}}
         onChangeText={(name) => this.setState({name})}
-        value={this.state.name} ></TextInput>
+        placeholder={this.state.name} ></TextInput>
             <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1, width: '90%'}}
         onChangeText={(email) => this.setState({email})}
-        value={this.state.email}></TextInput>
-            <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1, width: '90%'}}
+        placeholder={this.state.email}></TextInput>
+            <TextInput secureTextEntry={true} style={{height: 40, borderColor: 'gray', borderWidth: 1, width: '90%'}}
         onChangeText={(password) => this.setState({password})}
-        value={this.state.password}></TextInput>
+        placeholder={this.state.password}></TextInput>
 
             {/* <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
               <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
@@ -67,13 +67,13 @@ export default class HomeScreen extends React.Component {
           </View> */}
         </ScrollView>
 
-        <View style={styles.tabBarInfoContainer}>
+        {/* <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}></Text>
 
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>nafvigation/MainTabNavigator.js</MonoText>
           </View>
-        </View>
+        </View> */}
       </View>
     );
   }
